@@ -34,6 +34,11 @@ namespace ShopEasy.Data
 
             // Apply all configurations automatically
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+
+            //discount configuration sequence beacause bulider didn't have (has sequance)
+            modelBuilder.HasSequence<int>("DiscountSeq", "shop")
+                   .StartsAt(1000)
+                   .IncrementsBy(1);
         }
     }
 }
