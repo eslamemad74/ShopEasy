@@ -23,6 +23,7 @@ serviceCollection.AddScoped<ProductService>();
 serviceCollection.AddScoped<OrderService>();
 serviceCollection.AddScoped<CustomerService>();
 serviceCollection.AddScoped<DiscountService>();
+serviceCollection.AddScoped<AdvancedService>();
 
 // Build service provider
 var serviceProvider = serviceCollection.BuildServiceProvider();
@@ -41,6 +42,8 @@ using (var scope = serviceProvider.CreateScope())
     var productService = provider.GetRequiredService<ProductService>();
     var orderService = provider.GetRequiredService<OrderService>();
     var customerService = provider.GetRequiredService<CustomerService>();
+    var advancedService = provider.GetRequiredService<AdvancedService>();
+    var DiscountService = provider.GetRequiredService<DiscountService>();
 
     // Test calls
     productService.GetAllProducts();
