@@ -13,6 +13,6 @@ namespace ShopEasy.Models
         public string PostalCode { get; set; }
         public string NationalId { get; set; }
 
-        public Customer Customer { get; set; }
+        public virtual Customer Customer { get; set; }
     }
 }

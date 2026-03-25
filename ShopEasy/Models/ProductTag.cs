@@ -9,7 +9,7 @@ namespace ShopEasy.Models
         public int ProductTagId { get; set; }
         public int ProductId { get; set; } // Foreign Key to Product
 
-        public Product Product { get; set; }
-        public Tag Tag { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual Tag Tag { get; set; }
     }
 }

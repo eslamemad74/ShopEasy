@@ -12,7 +12,7 @@ namespace ShopEasy.Models
         public int Rating { get; set; } // e.g., 1 to 5
         public string Comment { get; set; }
         public DateTime CreatedAt { get; set; }
-        public Product Product { get; set; } // Navigation property to Product
-        public Customer Customer { get; set; } // Navigation property to Customer
+        public virtual Product Product { get; set; } // Navigation property to Product
+        public virtual Customer Customer { get; set; } // Navigation property to Customer
     }
 }

@@ -12,7 +12,7 @@ using ShopEasy.Data;
 namespace ShopEasy.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260325002429_InitialCreationOfDataBase")]
+    [Migration("20260325014429_InitialCreationOfDataBase")]
     partial class InitialCreationOfDataBase
     {
         /// <inheritdoc />
@@ -73,10 +73,9 @@ namespace ShopEasy.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CustomerId"));
 
-                    b.Property<string>("CreatedAt")
-                        .IsRequired()
+                    b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<string>("Email")
@@ -317,8 +316,9 @@ namespace ShopEasy.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("SKU")
-                        .HasColumnType("int");
+                    b.Property<string>("SKU")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("StockQuantity")
                         .HasColumnType("int");

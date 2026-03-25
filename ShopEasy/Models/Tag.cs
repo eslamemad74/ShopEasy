@@ -9,6 +9,6 @@ namespace ShopEasy.Models
         public int TagId { get; set; }
         public string Name { get; set; }
         // Many-to-Many
-        public List<ProductTag> ProductTags { get; set; } = new List<ProductTag>();
+        public virtual List<ProductTag> ProductTags { get; set; } = new List<ProductTag>();
     }
 }

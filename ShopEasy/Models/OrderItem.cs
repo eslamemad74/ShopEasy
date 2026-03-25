@@ -12,7 +12,7 @@ namespace ShopEasy.Models
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
 
-        public Order Order { get; set; } // Navigation property to Order
-        public Product Product { get; set; } // Navigation property to Product
+        public virtual Order Order { get; set; } // Navigation property to Order
+        public virtual Product Product { get; set; } // Navigation property to Product
     }
 }

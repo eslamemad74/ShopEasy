@@ -11,11 +11,11 @@ namespace ShopEasy.Models
         public string Slug { get; set; }
         public string Description { get; set; }
         public int? ParentCategoryId { get; set; } // Self-referencing foreign key
-        public Category ParentCategory { get; set; }
+        public virtual  Category ParentCategory { get; set; }
 
-        public List<Category> SubCategories { get; set; } = new List<Category>();
+        public virtual List<Category> SubCategories { get; set; } = new List<Category>();
         // One-to-Many with Products
-        public List<Product> Products { get; set; } = new List<Product>();
+        public virtual List<Product> Products { get; set; } = new List<Product>();
 
         // مش هنستخدمه في DB (هنتجاهله بعدين في Configuration)
         public string InternalNotes { get; set; }

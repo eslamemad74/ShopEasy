@@ -23,5 +23,6 @@ var serviceProvider = services.BuildServiceProvider();
 // Get DbContext instance (اختياري بس للتجربة)
 using (var context = serviceProvider.GetRequiredService<AppDbContext>())
 {
-    Console.WriteLine("Database is ready ");
+    DataSeeder.Seed(context);
+    Console.WriteLine("Data Seeded Successfully ");
 }

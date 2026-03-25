@@ -13,9 +13,9 @@ namespace ShopEasy.Models
         public DateTime PlacedAt { get; set; }
         public DateTime? ShippedAt { get; set; } 
 
-        public  Customer Customer { get; set; } // Navigation property to Customer
-        public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>(); // Navigation property to OrderItems
-        public Payment Payment { get; set; } // Navigation property to Payment
+        public virtual Customer Customer { get; set; } // Navigation property to Customer
+        public virtual List<OrderItem> OrderItems { get; set; } = new List<OrderItem>(); // Navigation property to OrderItems
+        public virtual Payment Payment { get; set; } // Navigation property to Payment
 
     }
 }

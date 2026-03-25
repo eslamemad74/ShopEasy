@@ -12,6 +12,6 @@ namespace ShopEasy.Models
         public string Status { get; set; } // e.g., Completed, Pending, Failed
         public DateTime PaidAt { get; set; }
         public decimal Amount { get; set; }
-        public Order Order { get; set; } // Navigation property to Order
+        public virtual Order Order { get; set; } // Navigation property to Order
     }
 }
