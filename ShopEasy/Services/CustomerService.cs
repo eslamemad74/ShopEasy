@@ -11,7 +11,7 @@ public class CustomerService
         _context = context;
     }
 
-    // 💣 US-010 — Register Customer
+    //  US-010 — Register Customer
     public void Register(string name, string email, string phone, string address)
     {
         using var transaction = _context.Database.BeginTransaction();
@@ -38,7 +38,7 @@ public class CustomerService
         transaction.Commit();
     }
 
-    // 💣 US-011 — View Profile
+    //  US-011 — View Profile
     public void GetProfile(int id)
     {
         var customer = _context.Customers
@@ -61,7 +61,7 @@ public class CustomerService
         }
     }
 
-    // 💣 US-012 — Update Address
+    //  US-012 — Update Address
     public void UpdateAddress(int customerId, string newAddress)
     {
         var customer = _context.Customers

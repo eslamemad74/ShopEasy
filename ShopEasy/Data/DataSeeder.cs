@@ -64,7 +64,7 @@ public static class DataSeeder
         var json = File.ReadAllText(fullPath);
 
         Console.WriteLine($"Reading: {path}");
-        Console.WriteLine(json); // 👈 مهم جدًا
+        Console.WriteLine(json); 
 
         return JsonSerializer.Deserialize<T>(json)!;
     }
@@ -79,7 +79,7 @@ public static class DataSeeder
 
         var options = new JsonSerializerOptions
         {
-            PropertyNameCaseInsensitive = true // 👈 مهم جدًا
+            PropertyNameCaseInsensitive = true 
         };
 
         return JsonSerializer.Deserialize<T>(json, options)!;

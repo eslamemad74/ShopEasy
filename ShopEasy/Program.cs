@@ -46,14 +46,5 @@ using (var scope = serviceProvider.CreateScope())
     productService.GetAllProducts();
     productService.TopProducts();
 
-    // مثال Order (لو عايز تجرب)
-    /*
-    var cart = new List<CartItem>
-    {
-        new CartItem { ProductId = 1, Quantity = 2 },
-        new CartItem { ProductId = 2, Quantity = 1 }
-    };
-
-    orderService.PlaceOrder(1, cart);
-    */
+   
 }
